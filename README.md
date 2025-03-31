@@ -6,6 +6,5 @@ Setup Python for Visual Studio Code: https://youtu.be/9o4gDQvVkLU
 
 Install pygame: https://youtu.be/5uOTEOJ48G8
 
-* **Pygame**
-    * Create a Game Window [#1](https://youtu.be/vY_9LKxQL_0)
-    * Drawing and Graphics [#2](https://youtu.be/WC6Yuzw7IYc)
+* Create a Game Window [#1](https://youtu.be/vY_9LKxQL_0)
+* Drawing and Graphics [#2](https://youtu.be/WC6Yuzw7IYc)
