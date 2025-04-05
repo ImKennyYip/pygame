@@ -81,7 +81,7 @@ while True:
             exit()
 
     keys = pygame.key.get_pressed()
-    if (keys[pygame.K_UP] or keys[pygame.K_w]):
+    if (keys[pygame.K_UP] or keys[pygame.K_w]) and not player.jumping:
         # player.y = max(player.y - PLAYER_DISTANCE, 0)
         player.velocity_y = PLAYER_VELOCITY_Y
         player.jumping = True
