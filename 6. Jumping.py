@@ -48,7 +48,7 @@ class Player(pygame.Rect):
     def update_image(self):
         if self.jumping:
             self.width = PLAYER_JUMP_WIDTH
-            self.height = PLAYER_HEIGHT
+            self.height = PLAYER_JUMP_HEIGHT
             if self.direction == "right":
                 self.image = player_image_jump_right
             elif self.direction == "left":
