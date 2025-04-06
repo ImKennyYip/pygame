@@ -1,5 +1,5 @@
 import pygame
-from sys import exit #terminate the program
+from sys import exit
 import os
 
 #game variables
@@ -32,7 +32,6 @@ player_image_jump_right = load_image("megaman-right-jump.png", (PLAYER_JUMP_WIDT
 player_image_jump_left = load_image("megaman-left-jump.png", (PLAYER_JUMP_WIDTH, PLAYER_JUMP_HEIGHT))
 
 pygame.init()
-
 window = pygame.display.set_mode((GAME_WIDTH, GAME_HEIGHT))
 pygame.display.set_caption("Kenny Yip Coding - PyGame")
 pygame.display.set_icon(player_image_right)
@@ -48,23 +47,27 @@ class Player(pygame.Rect):
     
     def update_image(self):
         if self.jumping:
+            self.width = PLAYER_JUMP_WIDTH
+            self.height = PLAYER_HEIGHT
             if self.direction == "right":
                 self.image = player_image_jump_right
             elif self.direction == "left":
                 self.image = player_image_jump_left
         else:
+            self.width = PLAYER_WIDTH
+            self.height = PLAYER_HEIGHT
             if self.direction == "right":
                 self.image = player_image_right
             elif self.direction == "left":
                 self.image = player_image_left
-    
+
 player = Player()
 
 def move():
     player.velocity_y += GRAVITY
     player.y += player.velocity_y
 
-    if player.y + player.height > FLOOR_Y: #hit the ground
+    if player.y + player.height > FLOOR_Y:
         player.y = FLOOR_Y - player.height
         player.jumping = False
 
@@ -74,7 +77,7 @@ def draw():
     player.update_image()
     window.blit(player.image, player)
 
-while True:
+while True: #game loop
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             pygame.quit()
@@ -82,20 +85,16 @@ while True:
 
     keys = pygame.key.get_pressed()
     if (keys[pygame.K_UP] or keys[pygame.K_w]) and not player.jumping:
-        # player.y = max(player.y - PLAYER_DISTANCE, 0)
         player.velocity_y = PLAYER_VELOCITY_Y
         player.jumping = True
 
-    # if keys[pygame.K_DOWN] or keys[pygame.K_s]:
-    #     player.y = min(player.y + PLAYER_DISTANCE, GAME_HEIGHT - player.height)
-
     if keys[pygame.K_LEFT] or keys[pygame.K_a]:
-        player.direction = "left"
         player.x = max(player.x - PLAYER_DISTANCE, 0)
+        player.direction = "left"
 
     if keys[pygame.K_RIGHT] or keys[pygame.K_d]:
-        player.direction = "right"
         player.x = min(player.x + PLAYER_DISTANCE, GAME_WIDTH - player.width)
+        player.direction = "right"
 
     move()
     draw()
