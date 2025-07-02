@@ -22,3 +22,5 @@ Learn everything you need to know for creating a platformer game. For this tutor
 * Invincibility [#11](https://youtu.be/4oQa59LHTtI)
 * Health Bar and Damage [#12](https://youtu.be/VVlgVZia9PM)
 * Shooting Bullets [#13](https://youtu.be/TR2vTLkXRo8)
+* Enemy Change Directions [#14](https://youtu.be/wzqxdE-qeyE)
+* Enemy Bullets [#15](https://youtu.be/y8Q2I4HBAEA)
