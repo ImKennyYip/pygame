@@ -4,6 +4,7 @@ Pygame is a module for creating games in python.
 Setup Python for Visual Studio Code: https://youtu.be/9o4gDQvVkLU
 
 Install pygame: https://youtu.be/5uOTEOJ48G8
+
 Install pygame-ce (for python v3.13+): https://youtu.be/ZKi7Z7JRN6c
 
 Python Object Oriented Programming Tutorials: https://www.youtube.com/playlist?list=PLnKe36F30Y4Ykmi2jE28BZahMgPAV3Dzv
